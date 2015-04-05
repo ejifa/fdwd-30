@@ -36,6 +36,7 @@ main {
   float: left;
   position: relative;
   top: 50%;
+  margin: 0 0 0 20px;
   transform: translateY(-50%);
 }
 
@@ -63,6 +64,8 @@ main {
 footer {
   text-align: center;
   color: gray;
+  width: 50%;
+  margin: 0 auto;
 }
 
 p {
@@ -73,6 +76,5 @@ hr {
   color: gray;
   box-shadow: 0px 1px 0px white;
   margin: 20px auto 20px auto;
-  width: 50%;
-  text-align: center;
+  width: 100%;
 }
