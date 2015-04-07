@@ -32,9 +32,7 @@ main {
 
 .logo {
   position: relative;
-  display: inline;
   float: left;
-  position: relative;
   top: 50%;
   margin: 0 0 0 20px;
   transform: translateY(-50%);
@@ -44,7 +42,6 @@ main {
 	background-color: #2E52AD;
 	border-radius: 5px;
 	border: 1px solid #143380;
-	display: inline;
 	color: #ffffff;
   padding: 10px;
 	text-decoration: none;
