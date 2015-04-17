@@ -13,7 +13,7 @@ header {
 }
 
 main {
-  padding: 10px 50px 10px 50px;
+  padding: 10px 50px 50px 50px;
   margin: 50px auto 50px auto;
   background-color: white;
   border-radius: 10px;
@@ -90,6 +90,18 @@ ul {
 	padding: 0;
   display: flex;
 }
+
+.forms {
+  padding: 10px 0;
+}
+
+.form {
+  width: 150px;
+}
+
+.input {
+}
+
 
 .product-images {
   padding: 6px;
