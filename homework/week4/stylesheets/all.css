@@ -92,14 +92,21 @@ ul {
 }
 
 .forms {
-  padding: 10px 0;
+  padding: 4px 0;
 }
 
 .form {
   width: 150px;
 }
 
-.input {
+.inp {
+  border-radius: 2px;
+  border: 1px solid salmon;
+  outline: none;
+}
+
+.inp:focus{
+  box-shadow: 0 0 3px lime;
 }
 
 
