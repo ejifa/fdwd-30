@@ -5,7 +5,6 @@ body {
 }
 
 header {
-  /*height: 100px;*/
   width: 100%;
   position: relative;
   background-color: #c4c4c4;
@@ -18,15 +17,13 @@ main {
   margin: 50px auto 50px auto;
   background-color: white;
   border-radius: 10px;
-  width: 50%;
+  width: 80%;
   box-shadow: 0px 0px 10px gray;
   border: 1px solid #999;
   box-sizing: border-box;
 }
 
 .nav {
-  /*float: right;*/
-  /*position: relative;*/
   position: absolute;
   right: 0;
   top: 50%;
@@ -36,9 +33,6 @@ main {
 
 .logo {
   padding: 20px 40px;
-  /*top: 50%;*/
-  /*margin: 0 0 0 20px;*/
-  /*transform: translateY(-50%);*/
 }
 
 .btn {
@@ -49,7 +43,18 @@ main {
   padding: 10px;
 	text-decoration: none;
 	text-shadow: 0px 1px 0px black;
+}
 
+.btn-cart {
+	background-color: #C93D3A;
+	border-radius: 5px;
+	border: 1px solid #5C1A25;
+	color: #ffffff;
+  padding: 10px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px black;
+  display: inline-block;
+  margin: 10px 0;
 }
 
 .link {
@@ -64,7 +69,7 @@ main {
 footer {
   text-align: center;
   color: gray;
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -77,4 +82,24 @@ hr {
   box-shadow: 0px 1px 0px white;
   margin: 20px auto 20px auto;
   width: 100%;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  display: flex;
+}
+
+.product-images {
+  padding: 6px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #eee;
+  line-height: 0px;
+}
+
+.product-description {
+  flex: 1;
+  padding: 0 10px;
 }
