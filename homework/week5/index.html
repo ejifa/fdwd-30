@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Intro to JS</title>
+    <script>
+
+      function longestSide() {
+        var a = prompt("Enter First Side", "2");
+        var b = prompt("Enter Second Side", "3");
+        var c = Math.sqrt(a*a + b*b);
+        alert("The Longest Side is " + c.toFixed(2));
+      }
+
+      function circleRadius() {
+        alert("Radius of a Circle: 2 * pi * r");
+        var r = prompt("What is r?", "2");
+        var x = 2 * Math.PI * r;
+        alert("The Circumference is " + x.toFixed(2));
+      }
+
+      function tempOutside() {
+        var f = prompt("How hot is it outside in F?", "69");
+        var c = (f - 32) * 5/9;
+        alert("The temperature is " + c.toFixed(2) + "\xB0" + "C, so enjoy!");
+      }
+
+      function howTall() {
+        var i = prompt("How tall are you in inches?", "67");
+        var m = i / 39.37;
+        alert("Your height is " + m.toFixed(2) + "m");
+      }
+
+  </script>
+  </head>
+  <body>
+      <input type=button value="Pythagorean Theorem" onClick="longestSide()">
+      <input type=button value="The Circumference" onClick="circleRadius()">
+      <input type=button value="Temperature Outside" onClick="tempOutside()">
+      <input type=button value="How Tall Are You in Inches?" onClick="howTall()">
+  </body>
+</html>
