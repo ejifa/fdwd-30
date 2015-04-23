@@ -1,0 +1,75 @@
+
+<!-- saved from url=(0044)http://avandamiri.com/fewd-30/dom-manip.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+body { font-family: sans-serif; }
+.set { border: 1px solid #ccc; padding: 0 2em; border-radius: 5px; margin-bottom: 2em; }
+#image { border: 5px dotted #ccc; border-radius: 10px; padding: 10px; margin-bottom: 1em; }
+.bold { font-weight: bold; }
+</style>
+
+<style type="text/css"></style></head><body><div class="set">
+  <h1>Set 1</h1>
+
+  <p>
+    Prompt for three todos and add each to this list:
+  </p>
+
+  <ul id="todo-list">
+    <li>First todo item...</li>
+  </ul>
+</div>
+
+<div class="set">
+  <h1>Set 2</h1>
+
+  <p>
+    Prompt for an image source, width, and height. Create an <code>&lt;img&gt;</code>,
+    set the respective attributes, and put it in this box:
+  </p>
+
+  <div id="image">
+  </div>
+</div>
+
+<div class="set">
+  <h1>Set 3</h1>
+
+  <p id="make-me-bold">
+    This paragraph is currently not bold. But there's a class <code>.bold</code>
+    set up in the CSS. Add that class to this paragraph. Yep, this one right here.
+  </p>
+</div>
+</body></html>
+
+<script>
+// var ul = document.querySelector("#todo-list");
+// var li = document.createElement("li");
+// li.textContent = prompt("First to do");
+// ul.appendChild(li);
+//
+// var li2 = document.createElement("li");
+// li2.textContent = prompt("Second to do");
+// ul.appendChild(li2);
+//
+// var li3 = document.createElement("li");
+// li3.textContent = prompt("Third to do");
+// ul.appendChild(li3);
+
+// function createImage() {
+//   var src = prompt("Gimme the image url", "http://cloud.avandamiri.com/image/3z1n220j0G17/sausage.jpg");
+//   var set = document.querySelector("#image");
+//   var img = document.createElement("img");
+//   img.setAttribute("src", src);
+//   set.appendChild(img);
+// }
+//
+// createImage();
+
+function makeBold(){
+  var p = document.querySelector("#make-me-bold");
+  p.setAttribute("class", "bold");
+}
+
+makeBold();
+
+</script>
