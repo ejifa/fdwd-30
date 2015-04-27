@@ -27,72 +27,46 @@ button { background-color: #58c0f5; color: white; border-radius: 3px; }
   </tr>
   <tr>
     <td>
-      <button id="add-button" class="inverted-button" onClick="addTwoNumbers()">+</button>
+      <button id="add-button" class="inverted-button" onClick="calculate('add')">+</button>
     </td>
     <td>
-      <button id="subtract-button" class="inverted-button" onClick="subtractTwoNumbers()">-</button>
+      <button id="subtract-button" class="inverted-button" onClick="calculate('subtract')">-</button>
     </td>
     <td>
-      <button id="multiply-button" class="inverted-button" onClick="multiplyTwoNumbers()">*</button>
+      <button id="multiply-button" class="inverted-button" onClick="calculate('multiply')">*</button>
     </td>
     <td>
-      <button id="divide-button" class="inverted-button" onClick="divideTwoNumbers()">/</button>
+      <button id="divide-button" class="inverted-button" onClick="calculate('divide')">/</button>
     </td>
   </tr>
 </tbody></table>
 
 <script>
 
+function calculate(operation) {
 
-function addTwoNumbers() {
-  var input1 = document.getElementById("first-operand").textContent;
-  var input2 = document.getElementById("second-operand").textContent;
-  var num1 = parseInt(input1);
-  var num2 = parseInt(input2);
+var input1 = document.getElementById("first-operand").textContent;
+var input2 = document.getElementById("second-operand").textContent;
 
-  var add = num1 + num2;
+var num1 = parseInt(input1);
+var num2 = parseInt(input2);
 
-  document.getElementById("result").textContent = add;
+var addResult = num1 + num2;
+var subtractResult = num1 - num2;
+var multiplyResult = num1 * num2;
+var divideResult = num1 / num2;
 
+if (operation == 'add'){
+  document.getElementById("result").textContent = addResult;
+} else if (operation == 'subtract') {
+  document.getElementById("result").textContent = subtractResult;
+} else if (operation == 'multiply') {
+  document.getElementById("result").textContent = multiplyResult;
+} else if (operation == 'divide') {
+  document.getElementById("result").textContent = divideResult;
 }
 
-function subtractTwoNumbers() {
-  var input1 = document.getElementById("first-operand").textContent;
-  var input2 = document.getElementById("second-operand").textContent;
-  var num1 = parseInt(input1);
-  var num2 = parseInt(input2);
-
-  var subtract = num1 - num2;
-
-  document.getElementById("result").textContent = subtract;
-
 }
-
-function multiplyTwoNumbers() {
-  var input1 = document.getElementById("first-operand").textContent;
-  var input2 = document.getElementById("second-operand").textContent;
-  var num1 = parseInt(input1);
-  var num2 = parseInt(input2);
-
-  var multiply = num1 * num2;
-
-  document.getElementById("result").textContent = multiply;
-
-}
-
-function divideTwoNumbers() {
-  var input1 = document.getElementById("first-operand").textContent;
-  var input2 = document.getElementById("second-operand").textContent;
-  var num1 = parseInt(input1);
-  var num2 = parseInt(input2);
-
-  var divide = num1 / num2;
-
-  document.getElementById("result").textContent = divide;
-
-}
-
-
 
 </script>
 </body></html>
