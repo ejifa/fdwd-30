@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>todo</title>
+  </head>
+  <body>
+    <header>
+      <form>
+        <input type="text" placeholder="What?">
+        <button type="submit">Create a Todo</button>
+      </form>
+    </header>
+
+    <hr>
+
+    <main>
+      <ul id="todo-list">
+        <li class="todo-item">tomato</li>
+        <li class="todo-item">avocado</li>
+      </ul>
+    </main>
+
+    <script>
+    var form = document.querySelector("form");
+    var input = form.querySelector("input");
+    var list = document.querySelector("#todo-list");
+
+    function createTodoItem(text) {
+      var item = document.createElement("li");
+      item.textContent = text;
+      item.setAttribute("class", "todo-item");
+      return item;
+    }
+
+    function formSubmitted(event) {
+      event.preventDefault();
+      list.appendChild(createTodoItem(input.value));
+      form.reset();
+    }
+    
+    form.addEventListener("submit", formSubmitted);
+
+    </script>
+
+  </body>
+
+</html>
