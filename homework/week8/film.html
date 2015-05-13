@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>Movie Search vs</h1>
+    <form>
+      <input type="input" id="searchInput" placeholder="Movie Title...">
+      <input type="button" name="searchButton" value="Search">
+    </form>
+
+    <ul>
+
+    </ul>
+
+  </body>
+  <script>
+var form = document.querySelector("form");
+var input = document.querySelector("input");
+var list = document.querySelector("ul");
+var button = document.querySelector("button")
+
+function get(url, success) {
+  var xhr = new XMLHttpRequest();
+
+  xhr.addEventListener("readystatechange", function() {
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    success(JSON.parse(xhr.response));
+  }
+});
+
+  xhr.open("GET", url);
+  xhr.send();
+}
+
+function success(results) {
+  var movies = results["Search"];
+
+  list.innerHTML = "";
+
+  for (var i = 0; i < movies.length; i++) {
+    var movie = movies[i];
+    var li = document.createElement("li");
+    li.textContent = movie["Title"];
+    list.appendChild(li);
+  }
+}
+
+function movieSearched(event) {
+  event.preventDefault();
+  get("http://omdbapi.com/?s=" + input.value, success);
+}
+
+// http://omdbapi.com/?s=
+
+form.addEventListener('submit', movieSearched);
+
+  </script>
+</html>
