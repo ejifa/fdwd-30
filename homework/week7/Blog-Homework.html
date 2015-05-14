@@ -83,8 +83,8 @@
       </article>
 
       <div class="like">
-        <a href="http://avandamiri.com/fewd-30/blog.html?#" id="like-link">Like</a>
-        (<span id="like-count">0</span>)
+        <a href="http://avandamiri.com/fewd-30/blog.html?#" class="like-link">Like</a>
+        (<span class="like-count">0</span>)
       </div>
 
       <div id="comments">
@@ -105,8 +105,7 @@
 
     var likes;
     var userName;
-    var likeButton = document.getElementById("like-link");
-    var commentButton = document.getElementById("like-link");
+    var likeButton = document.querySelector(".like-link");
     var form = document.getElementById("new-comment");
 
     likeButton.addEventListener("click", addLike);
@@ -114,13 +113,13 @@
 
     function addLike(event) {
       event.preventDefault();
-      
+
       userName = prompt("Authenticate with your name");
 
       if (userName == null || userName == ""){
 
       } else {
-      likes = document.getElementById("like-count");
+      likes = document.querySelector(".like-count");
       var likesNumber = parseInt(likes.textContent) + 1;
       likes.textContent = likesNumber;
       }
