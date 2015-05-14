@@ -103,7 +103,6 @@
 
     <script>
 
-    var likes;
     var userName;
     var likeButton = document.querySelector(".like-link");
     var form = document.getElementById("new-comment");
@@ -116,12 +115,10 @@
 
       userName = prompt("Authenticate with your name");
 
-      if (userName == null || userName == ""){
-
-      } else {
-      likes = document.querySelector(".like-count");
-      var likesNumber = parseInt(likes.textContent) + 1;
-      likes.textContent = likesNumber;
+      if (userName != null && userName != ""){
+        var likes = document.querySelector(".like-count");
+        var likesNumber = parseInt(likes.textContent) + 1;
+        likes.textContent = likesNumber;
       }
     }
 
@@ -132,15 +129,16 @@
       var comments = document.getElementById("comments");
       var commentValue = document.getElementById("new-comment-body").value;
 
-      if (commentValue == null || commentValue == ""){
-
-      } else {
+      if (commentValue != null && commentValue != ""){
         userName = prompt("Authenticate with your name");
-        newComment.textContent = commentValue + " - " + userName;
-        newComment.setAttribute("class", "comment");
 
-        comments.appendChild(newComment);
-        form.reset();
+        if (userName != "" && userName != null){
+          newComment.textContent = commentValue + " - " + userName;
+          newComment.setAttribute("class", "comment");
+
+          comments.appendChild(newComment);
+          form.reset();
+          }
       }
     }
 
